@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+/* print pattern
+	1
+   232
+  34543
+*/
+void printPattern(int n){
+   	for (int i = 1; i <=n; i++)
+   	{
+   		int j=i,k=1;
+   		/*print n-i spaces in each line at start to look good*/
+   		for(int j=n-i;j>0;j--)
+            cout<<" ";
+   		while(k<=i){/* i elements printed in increasing order*/
+            cout<<j;
+            j++;
+            k++;
+   		}
+   		j=j-2;k=1;
+   		while(k<=i-1){/* i elements printed in decreasing order*/
+            cout<<j;
+            j--;
+            k++;
+   		}
+   		cout<<endl;
+   	}
+}
+int main()
+{
+	printPattern(5);
+	return 0;
+}
